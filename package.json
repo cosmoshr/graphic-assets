@@ -1,0 +1,16 @@
+{
+  "name": "graphic-assets",
+  "version": "1.0.0",
+  "description": "Scripts and JS bindings for cosmoshr",
+  "main": "index.js",
+  "repository": "https://github.com/cosmoshr/graphic-assets.git",
+  "author": "trickypr <trickypr@users.noreply.github.com>",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "devDependencies": {
+    "svgexport": "^0.4.1"
+  },
+  "scripts": {
+    "rasterize": "node scripts/rasterize"
+  }
+}

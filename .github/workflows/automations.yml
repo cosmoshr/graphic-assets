@@ -1,0 +1,22 @@
+name: Automations 
+on: 
+  push:
+    branch: 
+      - master
+
+jobs:
+  rasterize:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - uses: sergioramos/yarn-actions/install@v6
+      with:
+        frozen-lockfile: true
+    - run: yarn rasterize
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update raster images
+        
